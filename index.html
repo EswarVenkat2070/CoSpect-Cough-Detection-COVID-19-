@@ -118,15 +118,20 @@ transform:rotate(40deg);
 var x;
   navigator.mediaDevices.getUserMedia({ audio: true })
       .then(function(stream) {
-        alert("Mic Access Enabled")
+        alert("Mic Detected & Access Enabled")
           x="Give access permission to your microphone.✔️ ";
          document.getElementById("msg").innerHTML = x;
+          y="Ensure your device has a microphone.✔️ ";
+         document.getElementById("ms").innerHTML = y;
       })
       .catch(function(err) {
         alert("Permission Denied !")
          x="Give access permission to your microphone.\u274C";
          document.getElementById("msg").innerHTML = x;
+         y="Ensure your device has a microphone.\u274C";
+         document.getElementById("ms").innerHTML = y;
       });
+
     </script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
